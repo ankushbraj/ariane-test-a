@@ -86,9 +86,9 @@ def entry_point():
     model.add(Dense(1, activation='sigmoid'))
 
     model.compile(
-        loss=str(hyper_params['loss']),
-        optimizer=str(hyper_params['optimizer']),
-        metrics=[str(hyper_params['metric'])]
+        loss='binary_crossentropy',
+        optimizer='adam',
+        metrics='accuracy'
     )
     model.summary()
 
